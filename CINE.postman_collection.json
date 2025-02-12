@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "64f97baf-6841-4d0a-b8d7-ac197b85d2e9",
+		"name": "CINE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25901266"
+	},
+	"item": [
+		{
+			"name": "DIRECTORES",
+			"item": [
+				{
+					"name": "crearDirector",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Quentin Tarantino\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/directores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"directores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTodosLosDirectores",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerDirectorPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/directores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"directores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarDirector",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/directores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"directores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ACTORES",
+			"item": [
+				{
+					"name": "crearActor",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GENEROS",
+			"item": [
+				{
+					"name": "crearGenero",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "obtenerTodasLasPeliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPeliculaPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearPelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"El Padrino\",\r\n  \"descripcion\": \"Película de mafia\",\r\n  \"directorId\": 1,\r\n  \"generoId\": 2,\r\n  \"actoresIds\": [3, 4, 5]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarPelicula",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"El Padrino II\",\r\n  \"descripcion\": \"Secuela de El Padrino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarPelicula",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPeliculasPorDirector",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/director/{directorId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"director",
+						"{directorId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPeliculaPorGenero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/genero/{generoId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"genero",
+						"{generoId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "asignarActorAPelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/{peliculaId}/actores/{actorId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"{peliculaId}",
+						"actores",
+						"{actorId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "elimiarActorPelicula",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/{peliculaId}/actores/{actorId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"{peliculaId}",
+						"actores",
+						"{actorId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerTop5Actores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/actores/top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"actores",
+						"top"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
